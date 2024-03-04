@@ -5,5 +5,3 @@
 ### Categories
 - [markdown 익히기](#markdown-익히기)
 
-## markdown 익히기
-#### makrdown 이란 
