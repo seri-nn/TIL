@@ -12,6 +12,38 @@ Header는 문자 앞에 '#'이나 을 입력하면 된다. (단, #과 한 칸을
 
 ![# 제목](https://github.com/seri-nn/TIL/assets/129299033/2aaf55c1-d1db-42c5-bd3a-93782bc64fcb)
 <img src='https://github.com/seri-nn/TIL/assets/129299033/8483ce0c-bd84-4957-b4c4-24e7673c7a4e' img width='10%' hegith='20%'></img>
-
 ## 2. Line Feed(줄 바꾸기)
 줄 바꾸기를 할 때는 enter를 2번 해야한다. 
+
+![줄바꾸기 입력](https://github.com/seri-nn/TIL/assets/129299033/f8a5c82b-649b-4349-a894-3addf55afdb0)
+![줄바꾸기 결과](https://github.com/seri-nn/TIL/assets/129299033/a0aa0099-d9da-4d5a-afff-ef1036cca3fa)
+## 3. Indexing(순서)
+평소에 순서를 매기는 방법과 동일하다. 들여쓰기를 하면 순서가 매겨지지 않는다. 
+
+1. 첫번째
+2. 두번째
+   - 순서 적용 안됨
+3. 세번째
+   - 순서 적용 안됨
+
+순서가 적용되지 않는 목록에서 사용 가능한 기호
+- hyphen(대쉬)
+* asterisks(별표)
++ plus sign(더하기)
+
+혼합해서 사용하는 것도 가능하다.
+- 안녕
+   - 안녕
+     + 안녕
+       * 안녕
+
+들여쓰기를 하지 않으면 똑같은 기호로 출력되지만 들여쓰기를 했을 때는 -,+,* 어떤 것을 사용해도 다 다른 기호로 출력이 된다. 하지만 모양은 3개만 존재하는 듯
+## 4. Division Line(구분선)
+'-'나 '*'을 3개 이상 사용하면 된다. 중간에 띄어쓰기를 해도 되고 6개 이상 사용해도 가능하다. 
+
+![image](https://github.com/seri-nn/TIL/assets/129299033/f91bdae2-e790-4723-ac8f-d7745d22092e)
+![image](https://github.com/seri-nn/TIL/assets/129299033/0189f8a8-5912-4e13-8f1b-926ed93cf086)
+
+
+
+
