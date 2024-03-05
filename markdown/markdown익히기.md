@@ -43,6 +43,33 @@ Header는 문자 앞에 '#'이나 을 입력하면 된다. (단, #과 한 칸을
 
 ![image](https://github.com/seri-nn/TIL/assets/129299033/f91bdae2-e790-4723-ac8f-d7745d22092e)
 ![image](https://github.com/seri-nn/TIL/assets/129299033/0189f8a8-5912-4e13-8f1b-926ed93cf086)
+## 5. Empahasis(강조)
+이테릭체 : _underscore(언더바)_ or *asterisks(별표)*
+
+굵게 : __underscore(언더바2개)__ or **asterisks(별표2개)**
+
+굵은 이테릭체 : ___underscore(언더바3개)___ or ***asterisks(별표3개)***
+
+취소선 : ~tilde(물결)~ 
+
+문장 가운데에 사용할 경우에는 **asterisks**를 사용하는게 좋다. 
+## 6. Quote(인용)
+'>'를 사용해 인용문을 삽입할 수 있다. 
+
+인용문 안에 또 다른 인용문을 삽입하려면 '>'의 갯수를 늘리면 된다. 
+
+인용문 안에서 다른 마크다운 요소 포함 가능하다. 
+
+![인용문입력](https://github.com/seri-nn/TIL/assets/129299033/fedb9d2a-37ab-4fbe-9ead-2fd2e8a7c2f2)
+<img src='https://github.com/seri-nn/TIL/assets/129299033/0e8f25d1-c4e9-4cd5-b1f5-5a74599b6fa5' img width='15%' height='25%'></img>
+
+
+
+
+
+
+
+
 
 
 
