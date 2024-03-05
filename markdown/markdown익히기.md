@@ -11,7 +11,7 @@ Header는 문자 앞에 '#'이나 을 입력하면 된다. (단, #과 한 칸을
 '#'의 갯수에 따라 문자의 크기를 조절할 수 있다. '#'는 최대 6개까지 사용 가능하다. 
 
 ![# 제목](https://github.com/seri-nn/TIL/assets/129299033/2aaf55c1-d1db-42c5-bd3a-93782bc64fcb)
-<img src='https://github.com/seri-nn/TIL/assets/129299033/8483ce0c-bd84-4957-b4c4-24e7673c7a4e' img width='20%' hegith='30%'></img>
+<img src='https://github.com/seri-nn/TIL/assets/129299033/8483ce0c-bd84-4957-b4c4-24e7673c7a4e' img width='10%' hegith='20%'></img>
 
 ## 2. Line Feed(줄 바꾸기)
 줄 바꾸기를 할 때는 enter를 2번 해야한다. 
