@@ -3,5 +3,5 @@
 *오늘 배운 것을 기록합니다*
 #
 ### Categories
+- [git](https://github.com/seri-nn/TIL/tree/main/Git)
 - [markdonw](https://github.com/seri-nn/TIL/tree/main/markdown)
-- [git]
