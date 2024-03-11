@@ -5,6 +5,6 @@
 ### Categories
 - [git](https://github.com/seri-nn/TIL/tree/main/Git)
 - [markdonw](https://github.com/seri-nn/TIL/tree/main/markdown)
-- [c](
+- [c](https://github.com/seri-nn/TIL/blob/main/C)
 
   
