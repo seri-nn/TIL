@@ -103,7 +103,11 @@ int main (void)
   - ++num : 값을 1 증가 후, 나머지 진행 (**선 증가, 후 연산**)
   - num++ : 문장 먼저 진행 후, 값을 1 증가 (**선 연산, 후 증가**)
   - --num : 값을 1 감소 후, 나머지 진행 (**선 감소, 후 연산**)
-  - num-- : 문장 먼저 진행 후, 값을 1 감소 (**선 연산, 후 감소**) 
+  - num-- : 문장 먼저 진행 후, 값을 1 감소 (**선 연산, 후 감소**)
+
+<img src="https://github.com/seri-nn/TIL/assets/129299033/580ed06a-c833-4c7f-a968-e6e6306fbb4f" img width="60%" height="40%"></img>
+
+<img src="https://github.com/seri-nn/TIL/assets/129299033/bbb4096e-93e8-44f1-bb96-453c8b913e68" img width="55%" height="45%"></img>
 
 e.g.
 ```
@@ -119,34 +123,32 @@ int main (void)
   return 0;
 }
 ```
----> num1++: 12
-
-     num1: 13
-
-     ++num2: 13
-
-     num2 : 13
+---> num1++: 12 num1: 13 ++num2: 13 num2 : 13
 
 ```
 # include<stdio.h>
 int main(void)
 {
   int num1 = 10;
-  int num2 = (num1--) + 2;
+  int num2 = (num1--) + 2;  // 소괄호의  영향을 받지 않음 다음 문장으로 넘어가야 값의 감소 일어남
   pritnf("num1: %d\n", num1);
   printf("num2: %d\n", num2);
   return 0;
 }
 ```
----> num1: 9
+---> num1: 9 num2: 12 
 
-     num2: 12 
+- 관계 연산자 : True 의미하는 1 / False 의미하는 0 반환
+  - < , > ==, !=, <=, >=
 
+- 논리 연산자
+  - '&&' : 모두 참이면 연산 결과로 참을 반환(논리AND)
+  - '||' : 둘 중 하나라도 참이면 결과로 참을 반환(논리 OR)
+  - '!' : 참이면 거짓, 거짓이면 참을 반환(논리 NOT)
 
-
-
-
-
+  - 콤마 연산자 : 둘 이상의 변수를 동시에 선언, 둘 이상의 문장을 한 행에 삽입하는 경우에 사용 (구분목적)
+ 
+  
 
 
 
