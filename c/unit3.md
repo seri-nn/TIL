@@ -75,11 +75,7 @@ int main (void)
   return 0;
 }
 ```
----> 덧셈 결과: 7
-     
-     3 + 4 = 7
-
-     3와 4의 합은 7입니다.
+---> 덧셈 결과: 7 3 + 4 = 7 3와 4의 합은 7입니다.
 
 ### 연산자(Operator)
 - 연산자 : 연산을 수행하는 기호
@@ -148,10 +144,31 @@ int main(void)
 
   - 콤마 연산자 : 둘 이상의 변수를 동시에 선언, 둘 이상의 문장을 한 행에 삽입하는 경우에 사용 (구분목적)
  
-  
+### 키보드로부터의 데이터 입력
+scanf_s("%d",&num) : 10진수 정수형태로 입력 받아서 변수 num에 저장 **& 중요**
 
++) scanf 함수를 사용할거면 오류가 발생하지 않도록 '#define _CRT_SECURE_NO_WARNINGS'를 입력해줘야함 
 
+하지만 scanf_s를 사용하면 추가 문구 입력 필요 없이 오류 걱정을 하지 않아도 됨 
 
+e.g.
+```
+#include<stdio.h>
+int main(void)
+{
+  int result;
+  int num1, num2;
+  printf("숫자 두 개를 입력하세요:");
+  scanf_s("%d %d", &num1, &num2);  // 여러 개의 데이터 입력 받을 수 있음 
+  result = num1 + num2
+  printf("%d + %d = %d\n", num1, num2, result);
+  return 0;
+}
+```
+---> 숫자 두 개를 입력하세요: 3 4  3 + 4 = 7 
+
+### 키워드(Keywords)
+키워드 : C언어의 문법을 구성하는, 의미가 결정되어 있는 단어 -> C언어의 문법 체계 구성
 
 
 
