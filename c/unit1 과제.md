@@ -1,4 +1,4 @@
-### 1주차 연습문제
+### Lecutre 02 연습문제
 
 
 <img src="https://github.com/seri-nn/TIL/assets/129299033/825842c5-8b98-47b9-910a-e5b183263974" width="80%" height="60%"></img>
