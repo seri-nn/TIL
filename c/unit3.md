@@ -214,7 +214,4 @@ int main(void)
 
 
 
-
-
-
 ㅍ
