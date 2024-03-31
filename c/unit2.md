@@ -75,7 +75,11 @@ int main (void)
   return 0;
 }
 ```
----> 덧셈 결과: 7 3 + 4 = 7 3와 4의 합은 7입니다.
+---> 
+
+덧셈 결과: 7 3 + 4 = 7 
+
+3와 4의 합은 7입니다.
 
 ### 연산자(Operator)
 - 연산자 : 연산을 수행하는 기호
@@ -112,27 +116,39 @@ int main (void)
 {
   int num1 = 12;
   int num2 = 12;
-  printf("num1++ : %d\n", num1++);
+  printf("num1++ : %d\n", num1++);  // 선 연산 후 증가이기 때문에 다음에 나오는 값부터 증가된 값이 적용됨 
   printf("num1: %d\n", num1);
   printf("++num2 : %d\n", ++num2);
   printf("num2 : %d\n", num2);
   return 0;
 }
 ```
----> num1++: 12 num1: 13 ++num2: 13 num2 : 13
+--->
+
+num1++: 12 
+
+num1: 13 
+
+++num2: 13 
+
+num2 : 13
 
 ```
 # include<stdio.h>
 int main(void)
 {
   int num1 = 10;
-  int num2 = (num1--) + 2;  // 소괄호의  영향을 받지 않음 다음 문장으로 넘어가야 값의 감소 일어남
+  int num2 = (num1--) + 2;  // 소괄호의 영향을 받지 않음 다음 문장으로 넘어가야 값의 감소 일어남
   pritnf("num1: %d\n", num1);
   printf("num2: %d\n", num2);
   return 0;
 }
 ```
----> num1: 9 num2: 12 
+---> 
+
+num1: 9 
+
+num2: 12 
 
 - 관계 연산자 : True 의미하는 1 / False 의미하는 0 반환
   - < , > ==, !=, <=, >=
