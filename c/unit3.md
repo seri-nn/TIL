@@ -94,7 +94,7 @@ int main(void)
 
 모든 정수의 가장 왼쪽에 있는 비트는 **부호 비트 Most Significant Bit**임 
 
-0 = + / 1 = - 
+0 : 양수 / 1 : 음수
 
 ![image](https://github.com/seri-nn/TIL/assets/129299033/9da82362-9b3a-4743-a745-b67727ae4b72)
 
