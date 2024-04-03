@@ -37,7 +37,7 @@
 #### sizeof를 이용한 바이트 크기 확인
 - **sizeof()** : 단항 연산자로 피연산자의 메모리 크기 반환 (피연산자로는 변수, 상수, 자료형의 이름 정도가 올 수 있음)
 
-  - 자료형의 크기(몇 비트인지)를 알려주는 연산자 = 자료형에 따른 크기는 항상 일정?
+  - 자료형의 크기(몇 비트인지)를 알려주는 연산자 = 자료형에 따른 크기는 항상 일정??
   
 e.g.
 ```
@@ -192,7 +192,7 @@ int main(void)
 ```
 -> 
  
-A 65 // %c는 아스키 코드 출력, %d는 컴퓨터가 저장하는 해당 아스키 코드의 숫자 출력 
+A 65 // %c는 아스키 코드 출력, %d는 해당 아스키 코드의 정수형 숫자 출력 
 
 A 65
 
@@ -200,5 +200,68 @@ Z 90
 
 Z 90 
 
+#### 바이트 값 측정
+- **%d**로 바이트 값 측정
 
+e.g.
+```
+# include<stdio.h>
+int main(void)
+{
+    printf("%d\n", sizeof(30));
+    printf("%d\n", sizeof(4.01));
+    printf("%d\n", sizeof('A'));
+    return 0;
+}
+```
+->
+
+4 // int형이라?
+
+8 // double형
+
+4 // int형? 정수라?
   
+### - 상수에 대한 이해
+
+#### 이름을 지니지 않는 리터럴(Literal)상수
+- 리터럴 상수 : 변수와 달리 이름이 없는 상수로 변경이 불가능한 상수 
+
+  리터럴 상수도 자료형이 결정되어야 메모리 공간에 저장될 수 있음
+
+e.g.
+```
+# include<stdio.h>
+int main(void)
+{
+    printf("literal int size : %d\n", sizeof(7));
+    printf("literal double size : %d\n", sizeof(7.14));
+    printf("literal char size : %d\n", sizeof('A'));
+    return 0;
+}
+```
+->
+
+literal int size : 4
+
+literal double size : 8
+
+literal char size : 4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
