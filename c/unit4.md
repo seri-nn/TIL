@@ -201,7 +201,7 @@ Z 90
 Z 90 
 
 #### 바이트 값 측정
-- **%d**로 바이트 값 측정
+- **%d**로 바이트 값 측정 (바이트 값은 정수로 표현되니까) 
 
 e.g.
 ```
@@ -242,22 +242,70 @@ int main(void)
 ```
 ->
 
-literal int size : 4
+literal int size : 4 // 정수는 기본적으로 int형으로 표현 
 
-literal double size : 8
+literal double size : 8 // 실수는 기본적으로 double형으로 
 
-literal char size : 4
+literal char size : 4 // 문자는 기본적으로 int형으로 
 
+#### 접미사를 이용한 다양한 상수의 표현
+- 정수형 상수의 표현을 위한 접미사
 
+![image](https://github.com/seri-nn/TIL/assets/129299033/92e6e9a9-d30e-4cb4-b6cf-9c0b00c0287f)
 
+- 실수형 상수의 표현을 위한 접미사
 
+![image](https://github.com/seri-nn/TIL/assets/129299033/be2d70ed-6eb8-4897-84a1-1eece52fd374)
 
+e.g.
+```
+# include<stdio.h>
+int main(void)
+{
+    float n1 = 5.78;
+    float n2 = 3.24 + 5.12;
+    return 0;
+}
+```
+-> "double"에서 "float"로 잘립니다 
 
+n1, n2는 double(8비트)에 저장되는 값들인데 float(4비트)에 저장하려해서 데이터 손실 발생 
 
+```
+int main(void)
+{
+    float n1 = 5.78f;
+    float n2 = 3.24f + 5.12F;
+    return 0;
+}
+```
+-> 실수 뒤에 F/f 붙여주면 오류 발생 x (대소문자 상관 없음)
 
+#### 이름을 지니는 심볼릭 상수(Symbolic Constants)
+- **심볼릭 상수** : 이름을 지니는 상수
+  - const 키워드 이용
+  - 매크로 이용 
 
+e.g.
+```
+# include<stdio.h>
+int main(void)
+{
+    const int max = 100; 
+    printf("%d\n", max);
 
+    max = 200;
+    printf("%d\n", max);
+    return 0;
+}
+```
+-> 
 
+100 // max는 'max'라는 이름을 가진 상수라 값을 변경 할 수 없음 
+
+오류 발생 // 값을 변경할 수 없는데 200으로 초기화하려 했으니 오류 발생 
+
+### - 자료형의 변환 
 
 
 
