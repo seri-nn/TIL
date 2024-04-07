@@ -157,7 +157,8 @@ int main(void)
 ``` 
 
 #### unsigned를 붙여서 0과 양의 정수만 표현 
-MSB(Most Significant Bit) : 가장 왼쪽에 위치한 비트로 부호를 나타내는 비트 
+- 'unsigned' 붙이면 양의 정수만 표현됨  
+- MSB비트도 데이터 표현에 사용돼서 표현되는 값의 범위가 양의 정수로 두 배 늘어남 ( MSB(Most Significant Bit) : 가장 왼쪽에 위치한 비트로 부호를 나타내는 비트)
 
 ![image](https://github.com/seri-nn/TIL/assets/129299033/b4bd8f16-25d1-4472-b69e-bd5f10f489d7)
 
@@ -229,6 +230,7 @@ int main(void)
 
   리터럴 상수도 자료형이 결정되어야 메모리 공간에 저장될 수 있음
 
+  e.g. int num = 30 + 40; -> 30과 40은 리터럴 상수 / num은 변
 e.g.
 ```
 # include<stdio.h>
@@ -284,7 +286,7 @@ int main(void)
 #### 이름을 지니는 심볼릭 상수(Symbolic Constants)
 - **심볼릭 상수** : 이름을 지니는 상수  
   - const 키워드 이용
-  - 매크로 이용 
+  - 매크로 이용 (지금 수업에서는 다루지 않음)
 
 e.g.
 ```
