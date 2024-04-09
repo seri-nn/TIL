@@ -98,6 +98,125 @@ print(a,b)
 --> 8 28 
 
 ### 지역변수와 전역변수
+#### 지역변수 
+
+: 한정된 지역(local)에서만 사용되는 변수 = **함수 안에서 정의 돼있는 것**
+
+#### 전역변수
+
+: 프로그램 전체(global)에서 사용되는 변수 = **함수 안에서 정의 돼있지 않은 것**
+
+지역변수와 전역변수의 이름이 같은 경우 **지역변수가 우선됨**
+
+e.g. 
+```python
+def func1():
+    a=10  # 지역변수 
+    print(a)
+
+def func2():
+    print(a)
+
+a=20  # 전역변수 (함수에 포함 x)
+
+func1()  # 이름이 같을 때 지역변수가 우선되므로 func1에선 10 출력
+func2()  # func2에는 정의된 지역변수가 없으므로 전역변수 20 출력
+```
+--> 10 20 
+
+### 예제
+1. 3명의 사용자가 a,b,c가 두 숫자를 입력하고 합을 구하는 코드
+
+```python
+def hapfunc():
+    num1=int(input("숫자:"))
+    num2=int(input("숫자:"))
+    return num1+num2
+print("a number")
+hap=hapfunc()
+print(hap)
+print("b number")
+hap=hapfunc()
+print(hap)
+print("c number)
+hap=hapfunc()
+print(hap)
+```
+
+2. 문자열 하나를 입력 받아 인터넷 주소를 반환하는 make_url함수 정의
+
+```python
+def make_url(string):
+    url="www." + string + ".com"
+    print(url)  # 실행결과에 아무것도 받지않고 출력되므로 print가 def 안에 있다고 생각 가능 
+
+make_url("naver")
+make_url("facebook")
+```
+-->
+
+www.naver.com
+
+www.facebook.com
+
+3. 문자열을 입력받아 각 문자들로 구성된 리스트를 반환하는 make_list함수
+
+```python
+def make_list(string):
+    a=[]
+    for i in string:
+        a.append(i)
+    print(a)
+
+make_list("naver")
+make_list("facebook")
+
+for i in string:
+    a.append(i)
+return a
+print(make_list("naver"))  # 위 코드와 같은 의미
+```
+
+--> 
+
+['n','a','v','e','r']
+
+['f','a','c','e','b','o','o','k']
+
+4. 숫자로 구성된 하나의 리스트를 입력받아, 짝수들을 추출하여 리스트로 반환하는 pickup_even 함수 정의
+
+```python
+def pickup_even(items):
+    a=[]
+    for i in itmes:
+        if i%2==0:
+            a.append(i)
+    print(a)
+pickup_even([3,4,5,6,7,8])
+```
+-->
+
+[4,6,8]
+
+5. 주어진 리스트의 평균 구하는 함수
+
+```python
+def average(list):
+    result=sum(list)/len(list)
+    return result
+
+scores= [80, 75, 91, 47, 66, 82, 57, 65, 90, 91, 33, 39, 78, 59, 40, 23, 19, 99, 75, 79, 37, 48, 82, 60, 60, 63, 100, 8, 12, 92, 32, 50, 61, 28, 84, 40, 100, 25, 94, 74, 88, 94, 100, 5, 26]
+
+print(average(scores))
+```
+
+*정의 부분을 보고 호출하는 법을 알아야 됨*
+
+*return 값 받는지 안받는지도 중요*
+
+*정의 부분 규격과 호출 부분 규격 맞추기*
+
+
 
 
 
