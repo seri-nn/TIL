@@ -91,17 +91,81 @@ int main(void)
   e.g. 'apple', 'orange'
 
 #### 필드 폭을 지정하여 정돈된 출력 보이기
+- 서식 문자 앞에 숫자 입력 = 숫자는 필드 폭 의미 = 몇 칸 띄울건지 
+- 오른쪽 정렬이 기본
+- 왼쪽 정렬은 숫자 앞에 - 붙이기
 
+e.g. 문자는 왼쪽 정렬, 숫자는 오른쪽 정렬하기
+``` 
+# incldue<stdio.h>
+int main(void)
+{
+    printf("%-10s %-10s\n", "이름", "예치금");
+    printf("%-10s %10d\n", "솜솜이", 50000);
+    pirntf("%-10s %10d\n", "조세린", 2800000);
+    return 0;
+}
+```
+-->
 
+![image](https://github.com/seri-nn/TIL/assets/129299033/d90ae45d-a26b-4b12-8823-4c5dadde217d)
 
+### 02. scanf 함수
+- 데이터를 입력받는 scanf 함수에게는 **입력의 형식**과 **입력의 장소**에 대한 정보를 전달해야 함
 
+#### 정수 기반의 입력 형태 정의
+- %d : 10진수 정수 형태로 데이터 입력받음
+- %o : 8진수 양의 정수 형태로 데이터 입력받음 
+- %x : 16진수 양의 정수 형태로 데이터 입력받음
 
+e.g.
+```
+# define _CRT_SECURE_NO_WARNINGS
+# incldue<stdio.h>
+int main(void)
+{
+    int n1, n2, n3;
+    printf("세 개의 숫자를 입력하세요:");
+    scanf("%d %o %x", &n1, &n2, &n3);  // 13 13 13 입력하지만 각각 10진수, 8진수, 16진수로 인식됨 
 
+    printf("\n 당신이 입력한 숫자는 다음과 같습니다:");
+    printf("%d %d %d\n", n1, n2, n3);  // 10진수로 변환해서 출력 
+    return 0; 
+}
+```
+-->
 
+13 11 19 
 
+#### 실수 기반의 입력 형태 정의
+- float형 데이터 삽입을 위한 서식 문자 : %f
+- double, long double형 데이터 삽입을 위한 서식 문자 : %lf
 
+-> 
 
+float, double, long double의 데이터 **출력** : **%f %f %lf**
 
+float, double, long double의 데이터 **입력** : **%f %lf %lf** 
+
+e.g.
+```
+# defint _CRT_SECURE_NO_WARNINGS
+# include<stdio.h>
+int main(void)
+{
+    float num1;
+    double num2;
+    long double num3;
+
+    printf("실수 입력1:");
+    scanf("%f", &num1); 
+    printf("실수 입력2:");
+    scanf("%lf", &num2); 
+    printf("실수 입력3:");
+    scanf("%lf", &num3);
+    return 0;
+}
+```
 
 
 
