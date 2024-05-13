@@ -268,11 +268,146 @@ main 함수 내 지역변수 num: 1
   - 프로그램의 시작과 동시에 메모리 공간에 할당돼 종료 시까지 존재
   - 별도의 값으로 초기화하지 않으면 0으로 초기화됨
   - 프로그램 전체 영역 어디서든 접근 가능
+  - 많이 쓰면 좋지 않음
+  
+e.g.
+```
+# include<stdio.h>
+int num;  // 전역변수는 기본 0으로 초기화됨 
+
+int main(void)
+{
+    printf("num: %d\n", num);  // 0 
+    Add(3)
+    printf("num: %d\n", num);  // 3 
+    num++;  // 전역변수 num의 값 1 증가 
+    printf("num:%d\n", num);  // 4 
+    return 0;
+}
+
+void Add(int val)
+{
+    num+=val;  // 전역변수 num의 값 val만큼 증가 
+}
+```
+-->
+
+num: 0
+
+num: 3
+
+num: 4
+
+```
+# include<stdio.h>
+int Add(int val);
+int num=1;
+
+int main(void)
+{
+    int num=5;
+    printf("num: %d\n", Add(3));  // 9+3 
+    printf("num: %d\n", num+9);  // 9+5 
+    return 0;
+}
+
+int Add(int val)
+{
+    int num=9;
+    num+=val;
+    return num;
+}
+```
+-->
+
+num: 12
+
+num: 14 
+
+#### 지역변수에 static 선언을 추가한 static 변수
+- static 변수의 특성 (지역, 전역변수 특성 두 개 다 가짐)
+  - 지역변수 : 선언된 함수 내에서만 접근이 가능
+  - 전역변수 : 딱 1회 초기화되고 프로그램 종료 시까지 메모리 공간에 존재
+
+e.g.
+```
+# include<stdio.h>
+void SimpleFunc(void)
+{
+    static int num1=0;  // 전역, 지역변수 특성 가짐 
+    int num2=0;  // 지역변수 
+    num1++, num2++;
+    printf("static: %d, local: %d\n", num1, num2);
+}
+int main(void)
+{
+    int j;
+    for(j=0; j<3; j++)
+        SimpleFunc();
+    return 0;
+}
+```
+-->
+
+static: 1, local: 1
+
+static: 2, local: 1
+
+static: 3, local: 1
+
+### 04. 재귀함수에 대한 이해
+- 재귀함수 : 자기 자신을 재호출하는 형태로 정의된 함수 
+
+#### 탈출조건이 존재하는 재귀함수의 예
+e.g.
+```
+# include<stdio.h>
+void Recursive(int num)
+{
+    if(num<=0)  // 재귀의 탈출 조건
+        return;  // 재귀의 탈출 
+    printf("Recursive call %d\n", num);
+    Recursive(num-1);  // 자기 자신을 재호출 
+}
+
+int main(void)
+{
+    Recursive(3);
+    return 0;
+}
+```
+-->
+
+Recursive call 3
+
+Recursive call 2
+
+Recursive call 1
 
 
+#### 재귀함수의 활용 사례 : 팩토리얼 함수
+e.g.
+```
+# include<stdio.h>
 
+int factorial(int);  // 함수의 원형 선언 
+int main(void)
+{
+    for(int k=1; k<10; k++)
+    {
+        printf("%d!=%d\n", k, factorial(k));
+    }
+    return 0;
+}
 
-
+int factorial(int n)  // 함수의 정의 
+{
+    if (n==0)
+        return 1;  // **주의** 
+    else
+        return n*factorial(n-1);
+}
+```
 
 
 
